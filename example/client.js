@@ -8,6 +8,7 @@ var React       = require('react');
 var ReactAsync  = require('react-async');
 var ReactRouter = require('react-router-component');
 var superagent  = require('superagent');
+var InputComponent  = require('./components/input');
 
 var Pages       = ReactRouter.Pages;
 var Page        = ReactRouter.Page;
@@ -87,7 +88,7 @@ var App = React.createClass({
           <script src="/assets/bundle.js" />
         </head>
         <Pages className="App" path={this.props.path}>
-          <Page path="/" handler={MainPage} />
+          <Page path="/" handler={InputComponent} />
           <Page path="/users/:username" handler={UserPage} />
           <NotFound handler={NotFoundHandler} />
         </Pages>
@@ -101,5 +102,5 @@ module.exports = App;
 if (typeof window !== 'undefined') {
   window.onload = function() {
     React.renderComponent(App(), document);
-  }
+  };
 }

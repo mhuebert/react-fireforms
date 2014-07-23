@@ -16,7 +16,9 @@
     "express": "~4.1.1",
     "node-jsx": "~0.10.0",
     "superagent": "~0.18.0",
-    "fibers": "~1.0.1"
+    "fibers": "~1.0.1",
+    "react-subscriptions": "git://github.com/sparkboard/react-subscriptions.git#3b7f447",
+    "firebase-subscriptions": "git://github.com/sparkboard/firebase-subscriptions.git#dd5145ff6ad67897d04fdce5211de43a4ca79e26"
   },
   "devDependencies": {
     "reactify": "~0.13.1",
