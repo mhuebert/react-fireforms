@@ -9,11 +9,14 @@ var ReactAsync  = require('react-async');
 var ReactRouter = require('react-router-component');
 var superagent  = require('superagent');
 var InputComponent  = require('./components/input');
+var Firebase = require('./firebase');
 
 var Pages       = ReactRouter.Pages;
 var Page        = ReactRouter.Page;
 var NotFound    = ReactRouter.NotFound;
 var Link        = ReactRouter.Link;
+
+var fireRef = new Firebase("https://react-fireforms.firebaseio.com/");
 
 var MainPage = React.createClass({
 
@@ -21,6 +24,7 @@ var MainPage = React.createClass({
     return (
       <div className="MainPage">
         <h1>Hello, anonymous!</h1>
+        <InputComponent fireRef={fireRef.child("demoTitle")} label="Title"/>
         <p><Link href="/users/doe">Login</Link></p>
       </div>
     );
@@ -85,13 +89,14 @@ var App = React.createClass({
       <html>
         <head>
           <link rel="stylesheet" href="/assets/style.css" />
-          <script src="/assets/bundle.js" />
         </head>
         <Pages className="App" path={this.props.path}>
-          <Page path="/" handler={InputComponent} />
+          <Page path="/" handler={MainPage} />
           <Page path="/users/:username" handler={UserPage} />
           <NotFound handler={NotFoundHandler} />
         </Pages>
+        <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.17/firebase.js'></script>
+        <script src="/assets/bundle.js" />
       </html>
     );
   }

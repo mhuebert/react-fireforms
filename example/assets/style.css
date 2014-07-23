@@ -10,3 +10,7 @@ body {
   padding: 25px;
 }
 
+
+.hidden {
+    display: none !important;
+}
