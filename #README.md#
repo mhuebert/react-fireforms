@@ -1,0 +1,20 @@
+# react-fireforms
+
+React components
+
+
+bind to firebase ref
+accept a firebase ref
+data always flows from firebase
+can send edits to Firebase
+can add validators
+
+
+
+Override text content for messages/buttons (i18n)
+Explicit classnames to control visibility of messages/buttons
+Validators: (1) asyncronous validators, (2) access to component
+Tests: http://facebook.github.io/jest/docs/tutorial-react.html
+Put fields into separate folder
+Namespace fields
+
