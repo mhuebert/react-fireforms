@@ -1,1 +1,0 @@
-exports.Input = require("./input")

@@ -6,9 +6,9 @@
 var React       = require('react');
 var ReactAsync  = require('react-async');
 var superagent  = require('superagent');
-var Firebase = require('./firebase');
+var Firebase = (typeof(window) == 'undefined') ? require("firebase") : Firebase;
 
-var FF = require("../fields")
+var FF = require("../src/fields")
 
 
 var fireRef = new Firebase("https://react-fireforms.firebaseio.com/");
@@ -19,7 +19,7 @@ var MainPage = React.createClass({
     return (
       <div className="MainPage">
         <h1>React-FireFields Example</h1>
-        <FF.Input fireRef={fireRef.child("demoTitle")} label="Title"/>
+        <FF.input fireRef={fireRef.child("demoTitle")} label="Title"/>
         <p><a href="/users/doe">Login</a></p>
       </div>
     );

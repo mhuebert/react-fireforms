@@ -11,6 +11,9 @@ can add validators
 
 
 
+CoffeeScript or JS?
+Field Mixin
+
 Override text content for messages/buttons (i18n)
 Explicit classnames to control visibility of messages/buttons
 Validators: (1) asyncronous validators, (2) access to component
