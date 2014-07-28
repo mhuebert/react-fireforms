@@ -8,7 +8,7 @@ var React       = require('react');
 var ReactAsync  = require('react-async');
 var ReactRouter = require('react-router-component');
 var superagent  = require('superagent');
-var InputComponent  = require('./components/input');
+var InputComponent  = require('../fields/input');
 var Firebase = require('./firebase');
 
 var Pages       = ReactRouter.Pages;
